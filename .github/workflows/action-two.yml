@@ -1,0 +1,18 @@
+name: Action two workflow
+on: push
+
+jobs:
+    Build_Test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: step1 - download code
+              uses: actions/checkout@v4
+            - name: step2 - install nodejs
+              uses: actions/setup-node@v4
+              with:
+                node-version: 18
+            - name: step3 - build app
+              run: npm run build
+            - name: step4 - test app
+              run: npm test
+
