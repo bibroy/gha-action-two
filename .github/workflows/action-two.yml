@@ -6,11 +6,11 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: step1 - download code
-              uses: actions/checkout@v4
+              uses: actions/checkout@v3
             - name: step2 - install nodejs
-              uses: actions/setup-node@v4
+              uses: actions/setup-node@v3
               with:
-                node-version: 18
+                node-version: 16
             - name: step3 - build app
               run: npm run build
             - name: step4 - test app
