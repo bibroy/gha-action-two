@@ -1,5 +1,7 @@
 name: Action two workflow
-on: push
+on: 
+    push:
+        branches: [ "main" ]
 
 jobs:
     Build_Test:
@@ -11,8 +13,8 @@ jobs:
               uses: actions/setup-node@v3
               with:
                 node-version: 16
-            - name: step3 - build app
-              run: npm run build --if-present
+            - name: step3 - install dependencies
+              run: npm ci
             - name: step4 - test app
               run: npm test
 
