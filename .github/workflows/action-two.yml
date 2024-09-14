@@ -1,7 +1,8 @@
 name: Action two workflow
 on: 
     push:
-        branches: [ "main" ]
+        branches:
+          - main
 
 jobs:
     Build_Test:
